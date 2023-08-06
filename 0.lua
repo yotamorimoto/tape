@@ -1,5 +1,8 @@
 -- :.
--- tape
+-- tape:zero
+-- 
+-- k2 clear
+-- k3 rec on/off
 
 engine.name = 'Interpret'
 function i(x) engine.interpret(x) end
@@ -13,7 +16,7 @@ end
 function init()
   screen.blend_mode(12)
   i([[
-    ~tape = Buffer.alloc(Server.default, 48000*15, 2);
+    ~tape = Buffer.alloc(s, 48000*15, 2);
     ~addr = NetAddr("localhost", 10111);
     ~pass = OSCFunc({ |m| ~addr.sendMsg("/hi", m[3], m[4]) }, '/reply');
     ]])
@@ -57,10 +60,9 @@ function key(n,z)
   end
 end
 
-
 function redraw(rate, pos)
-  screen.rect(pos*0.000177, 0, math.random(10,20), 64)
-  screen.level(rate*4+8)
+  screen.rect(pos*0.000177, 20, 8, 4)
+  screen.level(rate*4+10)
   screen.fill()
   screen.update()
 end

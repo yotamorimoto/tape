@@ -1,5 +1,8 @@
 -- :.
--- tape
+-- tape:one
+-- 
+-- from the softcut study
+-- k2 clear
 
 feed = 1.0
 preserve = 0.5

@@ -1,5 +1,8 @@
 -- :.
--- tape
+-- tape:two
+-- 
+-- from the softcut study
+-- k2 clear
 
 file = _path.dust.."code/here/there-8795.wav"
 
